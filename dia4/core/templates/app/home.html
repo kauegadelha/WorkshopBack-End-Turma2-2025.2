@@ -6,9 +6,16 @@
 </head>
 <body>
     <h1>Consulta CEP</h1>
+    <!-- Formulário que envia o CEP digitado para a view 'consulta_cep' -->
     <form method="get" action="{% url 'consulta_cep' %}">
+        <!-- Label para o campo CEP -->
         <label for="cep">Digite o Cep</label>
+        <!-- Campo de texto para o usuário digitar o CEP -->
+        <!-- 'id' e 'name' são usados para identificar o campo na requisição -->
+        <!-- 'title' fornece uma dica de preenchimento ao usuário -->
         <input type="text" id="cep" name="cep"  title="Digite um CEP válido (ex: 12345-678)" />
+
+        <!-- Botão que envia o formulário -->
         <button type="submit">Consultar</button>
     </form>
 </body>
