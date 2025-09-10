@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <title>Consulta CEP</title>
+</head>
+<body>
+    <h1>Consulta CEP</h1>
+    <!-- Formulário que envia o CEP digitado para a view 'consulta_cep' -->
+    <form method="post" action="{% url 'consulta_cep' %}">
+        <label for="cep">Digite o Cep</label>
+        <input type="text" id="cep" name="cep"  title="Digite um CEP válido (ex: 12345-678)" />
+
+        <!-- Botão que envia o formulário -->
+        <button type="submit">Consultar</button>
+    </form>
+</body>
+</html>

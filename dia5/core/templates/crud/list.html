@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Lista de CEPs</h2>
+<table border="1">
+  <tr>
+    <th>CEP</th>
+    <th>Localidade</th>
+    <th>UF</th>
+    <th>Ações</th>
+  </tr>
+  {% for obj in object_list %}
+  <tr>
+    <td>{{ obj.cep }}</td>
+    <td>{{ obj.localidade }}</td>
+    <td>{{ obj.uf }}</td>
+    <td>
+      <a href="{% url 'viacep:detail' obj.pk %}">Detalhes</a> |
+      <a href="{% url 'viacep:delete' obj.pk %}">Excluir</a>
+    </td>
+  </tr>
+  {% endfor %}
+</table>
+<a href="{% url 'viacep:create' %}">Novo CEP</a>
+{% endblock %}

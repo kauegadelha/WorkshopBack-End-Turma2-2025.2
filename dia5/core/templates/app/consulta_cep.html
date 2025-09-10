@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <title>Resultado da Consulta</title>
+</head>
+<body>
+    <h1>Resultado da Consulta</h1>
+    
+    <!-- Verifica se existe um objeto 'endereco' passado pela view -->
+    {% if endereco %}
+        <!-- Exibe os campos do endereço retornado pela API -->
+        <p><strong>Rua:</strong> {{ endereco.rua }}</p>
+        <p><strong>Bairro:</strong> {{ endereco.bairro }}</p>
+        <p><strong>Cidade:</strong> {{ endereco.cidade }}</p>
+        <p><strong>Estado:</strong> {{ endereco.estado }}</p>
+        <p><strong>CEP:</strong> {{ endereco.cep }}</p>
+    {% else %}
+        <!-- Mensagem caso não tenha nenhum endereço -->
+        <p>Endereço não encontrado.</p>
+    {% endif %}
+    
+    <!-- Link de volta para a página inicial -->
+    <a href="{% url 'create' %}">Voltar</a>
+</body>
+</html>

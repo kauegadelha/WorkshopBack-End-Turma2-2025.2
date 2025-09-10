@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Detalhes do CEP</h2>
+<p><strong>CEP:</strong> {{ object.cep }}</p>
+<p><strong>Logradouro:</strong> {{ object.logradouro }}</p>
+<p><strong>Bairro:</strong> {{ object.bairro }}</p>
+<p><strong>Localidade:</strong> {{ object.localidade }}</p>
+<p><strong>UF:</strong> {{ object.uf }}</p>
+<a href="{% url 'viacep:list' %}">Voltar</a>
+{% endblock %}

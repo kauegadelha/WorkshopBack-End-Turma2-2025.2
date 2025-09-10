@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{% block title %}Via CEP App{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <h1>Via CEP - Sistema de Consulta</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'viacep:list' %}">Lista de CEPs</a></li>
+                <li><a href="{% url 'viacep:create' %}">Adicionar CEP</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    <footer>
+        <p>© 2025 Via CEP - Todos os direitos reservados</p>
+    </footer>
+</body>
+</html>
