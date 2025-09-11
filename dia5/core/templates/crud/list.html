@@ -11,8 +11,8 @@
   {% for obj in object_list %}
   <tr>
     <td>{{ obj.cep }}</td>
-    <td>{{ obj.localidade }}</td>
-    <td>{{ obj.uf }}</td>
+    <td>{{ obj.cidade }}</td>
+    <td>{{ obj.estado }}</td>
     <td>
       <a href="{% url 'viacep:detail' obj.pk %}">Detalhes</a> |
       <a href="{% url 'viacep:delete' obj.pk %}">Excluir</a>
