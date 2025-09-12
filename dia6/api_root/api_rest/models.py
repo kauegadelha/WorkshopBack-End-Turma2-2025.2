@@ -11,6 +11,7 @@ class Endereco(models.Model):
     estado = models.CharField(max_length=100)
     cep = models.CharField(max_length=100)
 
+    # Esse método define como o objeto será exibido em textos.
     def __str__(self):
         return f" Rua: {self.rua}, Bairro: {self.bairro}, Cidade: {self.cidade}, Estado: {self.estado}, Cep: {self.cep}."
 
